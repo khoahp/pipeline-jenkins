@@ -21,8 +21,6 @@ node {
 
     echo "${env.BUILD_URL}"
 
-    EmailHelper emailHelper = new EmailHelper()
-
     simpleFunc()
 
     stage '\u2777 Stage 2'
