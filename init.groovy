@@ -10,5 +10,10 @@ stage('Demo') {
 
     sayHello 'Dave'
 
-    echo GlobalVars.foo
+    println('******')
+
+    println(GlobalVars.foo)
+
+    println('******')
+
 }
