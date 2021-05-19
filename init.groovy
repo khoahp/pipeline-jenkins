@@ -29,4 +29,14 @@ node {
 
 def simpleFunc() {
     println("Hello guy")
+
+    String config = libraryResource 'config.json'
+
+    //def props = readJSON file: 'smocktest.json'
+    def props = readJSON text: config
+    //def props = readJSON text: '{"tools-devportals":" 01-12-2021","mobile-authz":" 01-11-2021"}'
+
+    props.each { key, value ->
+        echo "Walked through key $key and value $value"
+    }
 }
