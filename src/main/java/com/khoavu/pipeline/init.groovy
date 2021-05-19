@@ -5,6 +5,7 @@
  * from https://github.com/hotwilson/jenkins2/edit/master/Jenkinsfile
  * by wilsonmar@gmail.com
  */
+import static groovy.io.FileType.FILES
 
 
 node {
