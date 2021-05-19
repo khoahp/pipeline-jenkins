@@ -9,5 +9,5 @@ stage('Demo') {
 
     sayHello 'Dave'
 
-    callTest
+    callTest ''
 }
