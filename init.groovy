@@ -12,6 +12,7 @@ import groovy.json.JsonSlurperClassic
 import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
+import com.khoavu.pipeline.EmailHelper
 
 
 node {
@@ -26,6 +27,10 @@ node {
     echo "${env.BUILD_NUMBER}"
 
     echo "${env.BUILD_URL}"
+
+    EmailHelper emailHelper = new EmailHelper()
+
+    emailHelper.simpleFunc()
 
     stage '\u2777 Stage 2'
 }
