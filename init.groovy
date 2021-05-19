@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-@Library(['pipeline-library-khoavu', 'lib-pipeline'])_
+@Library(['pipeline-library-khoavu'])_
 
 stage('Demo') {
 
