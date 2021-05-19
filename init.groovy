@@ -1,9 +1,11 @@
 #!/usr/bin/env groovy
 
-@Library('lib-pipeline')_
+@Library('pipeline-library-demo')_
 
 stage('Demo') {
-    echo 'Hello world'
 
-    callTest()
+    echo 'Hello World'
+
+    sayHello 'Dave'
+
 }
