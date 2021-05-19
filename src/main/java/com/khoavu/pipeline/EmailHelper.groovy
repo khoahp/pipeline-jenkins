@@ -1,4 +1,6 @@
-
-def simpleFunc() {
-    println("Hello guy")
+class EmailHelper {
+    def simpleFunc() {
+        println("Hello guy")
+    }
 }
+
