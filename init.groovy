@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 
-@Library('pipeline-library-demo')_
+@Library(['pipeline-library-demo', 'lib-pipeline'])_
+
 
 stage('Demo') {
 
@@ -8,4 +9,5 @@ stage('Demo') {
 
     sayHello 'Dave'
 
+    callTest
 }
