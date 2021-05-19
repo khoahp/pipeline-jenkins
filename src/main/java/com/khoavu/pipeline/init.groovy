@@ -30,6 +30,17 @@ node {
 def simpleFunc() {
     println("Hello guy")
 
+    def filenames = [];
+    def dir = new File("${env.WORKSPACE}");
+    dir.traverse(type: FILES, maxDepth: 0) {
+        filenames.add(it.getName())
+    }
+
+    for (int i = 0; i < filenames.size(); i++) {
+        def filename = filenames[i]
+        echo "${filename}"
+    }
+
     //String config = libraryResource 'config.json'
 
     def props = readJSON file: 'smocktest.json'
@@ -39,4 +50,6 @@ def simpleFunc() {
     props.each { key, value ->
         echo "Walked through key $key and value $value"
     }
+
+
 }
