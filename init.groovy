@@ -7,8 +7,6 @@
  */
 
 import hudson.model.*
-import com.khoavu.pipeline.EmailHelper
-
 
 node {
     stage '\u2776 Stage 1'
@@ -25,7 +23,12 @@ node {
 
     EmailHelper emailHelper = new EmailHelper()
 
-    emailHelper.simpleFunc()
+    simpleFunc()
 
     stage '\u2777 Stage 2'
+}
+
+
+def simpleFunc() {
+    println("Hello guy")
 }
